@@ -270,5 +270,107 @@ john.sayHello(); // Output: Hello, my name is John.
 
 
 
+Static Members:
+Definition:
+Static members are properties or methods that belong to a class itself, rather than to instances of the class. They are accessed using the class name, not an instance of the class.
+
+Example (Static Method):
+javascript
+Copy code
+class MathOperations {
+    static add(x, y) {
+        return x + y;
+    }
+}
+
+// Usage
+const result = MathOperations.add(3, 5);
+console.log(result); // Output: 8
+Example (Static Property):
+javascript
+Copy code
+class Counter {
+    static count = 0;
+
+    constructor() {
+        Counter.count++;
+    }
+}
+
+// Usage
+const obj1 = new Counter();
+console.log(Counter.count); // Output: 1
+
+const obj2 = new Counter();
+console.log(Counter.count); // Output: 2
+
+
+
+Sure, let's discuss static and private features in the context of JavaScript, specifically in the context of classes.
+
+Static Members:
+Definition:
+Static members are properties or methods that belong to a class itself, rather than to instances of the class. They are accessed using the class name, not an instance of the class.
+
+Example (Static Method):
+javascript
+Copy code
+class MathOperations {
+    static add(x, y) {
+        return x + y;
+    }
+}
+
+// Usage
+const result = MathOperations.add(3, 5);
+console.log(result); // Output: 8
+Example (Static Property):
+javascript
+Copy code
+class Counter {
+    static count = 0;
+
+    constructor() {
+        Counter.count++;
+    }
+}
+
+// Usage
+const obj1 = new Counter();
+console.log(Counter.count); // Output: 1
+
+const obj2 = new Counter();
+console.log(Counter.count); // Output: 2
+Private Members:
+Definition:
+Private members are properties or methods that are only accessible within the class where they are defined. They cannot be accessed or modified from outside the class.
+
+Example (Private Method):
+
+class Circle {
+    #radius;
+
+    constructor(radius) {
+        this.#radius = radius;
+    }
+
+    #calculateArea() {
+        return Math.PI * this.#radius * this.#radius;
+    }
+
+    getArea() {
+        return this.#calculateArea();
+    }
+}
+
+// Usage
+const myCircle = new Circle(5);
+console.log(myCircle.getArea()); // Output: 78.53981633974483
+console.log(myCircle.#radius);   // Error: Private field '#radius' is not defined in this context
+console.log(myCircle.#calculateArea()); // Error: Private field '#calculateArea' is not defined in this context
+
+
+
+
 
 
