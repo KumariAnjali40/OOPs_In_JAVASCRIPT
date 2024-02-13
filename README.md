@@ -341,6 +341,7 @@ console.log(Counter.count); // Output: 1
 
 const obj2 = new Counter();
 console.log(Counter.count); // Output: 2
+```
 Private Members:
 Definition:
 Private members are properties or methods that are only accessible within the class where they are defined. They cannot be accessed or modified from outside the class.
@@ -369,7 +370,7 @@ console.log(myCircle.getArea()); // Output: 78.53981633974483
 console.log(myCircle.#radius);   // Error: Private field '#radius' is not defined in this context
 console.log(myCircle.#calculateArea()); // Error: Private field '#calculateArea' is not defined in this context
 
-
+```
 ==================================
 ⭐ Getter and Setter in Oops
 ==================================
