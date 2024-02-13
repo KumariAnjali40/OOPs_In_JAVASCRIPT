@@ -370,7 +370,78 @@ console.log(myCircle.#radius);   // Error: Private field '#radius' is not define
 console.log(myCircle.#calculateArea()); // Error: Private field '#calculateArea' is not defined in this context
 
 
+==================================
+⭐ Getter and Setter in Oops
+==================================
 
+--In object-oriented programming (OOP), getters and setters are methods used to access and modify the values of private properties of a class. They provide a way to encapsulate the internal state of an object and control access to it.
+
+==================================
+⭐ Getter 
+==================================
+
+A getter is a method that is used to retrieve the value of a private property. It allows you to access the property as if it were a public property while controlling the access.
+
+====================
+```javascript
+ class Circle {
+    #radius;
+
+    constructor(radius) {
+        this.#radius = radius;
+    }
+
+    get radius() {
+        return this.#radius;
+    }
+}
+
+// Usage
+const myCircle = new Circle(5);
+console.log(myCircle.radius); // Output: 5
+
+```
+
+
+==================================
+⭐ Setter
+==================================
+
+A setter is a method that is used to modify the value of a private property. It allows you to control the modification of the property and perform additional actions when the property is being set.
+====================
+```javascript
+class Circle {
+    #radius;
+
+    constructor(radius) {
+        this.#radius = radius;
+    }
+
+    get radius() {
+        return this.#radius;
+    }
+
+    set radius(newRadius) {
+        if (newRadius > 0) {
+            this.#radius = newRadius;
+        } else {
+            console.log('Radius must be greater than 0.');
+        }
+    }
+}
+
+// Usage
+const myCircle = new Circle(5);
+console.log(myCircle.radius); // Output: 5
+
+myCircle.radius = 8;
+console.log(myCircle.radius); // Output: 8
+
+myCircle.radius = -3; // Output: Radius must be greater than 0.
+console.log(myCircle.radius); // Output: 8 (unchanged)
+
+
+```
 
 
 
