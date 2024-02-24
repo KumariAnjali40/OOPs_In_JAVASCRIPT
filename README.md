@@ -9,10 +9,19 @@
 
 ## OOP (Object-Oriented Programming):
 
+
+
+
 ### Object:
 A collection of properties and methods.
 
+
+
+
 ### Why use OOP:
+
+
+
 
 ### Parts of OOP:
 
@@ -44,6 +53,8 @@ A collection of properties and methods.
    }
 
    // Usage
+
+
    const myCar = new Car('Toyota', 'Camry');
    myCar.start();
    myCar.drive();
