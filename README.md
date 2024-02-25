@@ -25,13 +25,19 @@ A collection of properties and methods.
 
 ### Parts of OOP:
 
+```
+
 - Object literal
 - Constructor function
 - Prototypes
 - Classes 
 - Instances (new, this)
 
+
+```
+
 ## 4 Pillars of OOP:
+
 
 1. **Abstraction:**
    Abstraction involves simplifying complex systems by modeling classes based on the essential properties and behaviors they share. It allows you to focus on the relevant aspects of an object and ignore the irrelevant details.
